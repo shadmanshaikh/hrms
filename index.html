@@ -45,6 +45,8 @@
               </ul>
             </div>
             <div class="navbar-end">
+              <input type="checkbox" class="toggle mr-3" checked="checked" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"/>
+
               <a class="btn" href="https://test.naimatinnovation.com">Try Now</a>
             </div>
           </div>
@@ -172,7 +174,7 @@
            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
        </svg>
    </div>
-            <h1 class="text-4xl text-center mb-5 pt-3">Pricing</h1>
+            <h1 class="text-4xl text-center mb-5 pt-3 font-bold">Pricing</h1>
             <div class="flex justify-center">   
                 <div class="grid lg:grid-cols-3 gap-5 sm:grid-cols-1 gap-5 md:grid-cols-1 gap-5 mb-5">
                     <div class="card bg-base-100 w-80 shadow-2xl ">
@@ -204,11 +206,11 @@
                         <div class="card-body items-center text-center">
                             <div class="bg-blue-500 p-3 text-white border rounded-full">
                                 <h2 class="card-title">6 months Subscription</h2>
-                                <p>Duration : 1 year</p>
+                                <p>Duration : 6 Months</p>
                             </div>
                           <ul>
                             <p class="text-bold">Features Include:</p>
-                            <li>All-in-one </li>
+                            <li>✅ All-in-one </li> 
                         </ul>
                         </div>
                     </div>
@@ -216,14 +218,18 @@
             </div>
     </section>
 
+    <section class="preview mt-5 mb-5">
+    </section>
+
     <footer class="bg-[#4A00FF] p-5">
+        <p></p>
         <p class="text-white text-center">Copyright@2025 RUKN</p>
     </footer>
 
 
 
  
-
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 </body>
 <style>
     .custom-shape-divider-top-1738653913 {
@@ -259,6 +265,26 @@
 
 .custom-shape-divider-top-1738751094 .shape-fill {
     fill: #FFFFFF;
+}
+
+:root {
+  --my-color: #fff;
+  /* or any other variables/style */
+}
+[data-theme='dark'] {
+  --my-color: #000;
+  .custom-shape-divider-top-1738653913 .shape-fill {
+    fill: #191E24;
+}
+    .custom-shape-divider-top-1738751094 .shape-fill {
+      fill: #050505;
+  }
+}
+[data-theme='pink'] {
+  --my-color: #ffabc8;
+}
+body {
+  background-color: var(--my-color);
 }
 
 </style>
