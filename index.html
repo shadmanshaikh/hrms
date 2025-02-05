@@ -39,8 +39,8 @@
             </div>
             <div class="navbar-center hidden lg:flex ">
               <ul class="menu menu-horizontal px-1 text-xl">
-                <li class="text-white" href="#Pricing"><a>Pricing</a></li>
-                <li class="text-white"><a>Features</a></li>
+                <li class="text-white"><a href="#Pricing">Pricing</a></li>
+                <li class="text-white"><a href="#features">Features</a></li>
                 <li class="text-white"><a>Contact Us</a></li>
               </ul>
             </div>
@@ -75,7 +75,7 @@
 
     <!-- feature section -->
      <div class="flex justify-center">
-         <section class="features mb-5">
+         <section class="features mb-5" id="features">
             <div>
                 <h1 class="text-4xl text-center font-bold">Features</h1>
                  <div class="ml-3 mt-3 mb-3">
@@ -166,11 +166,15 @@
          </section>
      </div>
 
-
-    <section id="Pricing" class="Pricing bg-base-200">
+     <section id="Pricing" class="Pricing bg-base-200">
+      <div class="custom-shape-divider-top-1738751094">
+       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+           <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+       </svg>
+   </div>
             <h1 class="text-4xl text-center mb-5 pt-3">Pricing</h1>
             <div class="flex justify-center">   
-                <div class="grid lg:grid-cols-3 gap-5 sm:grid-cols-1 gap-5 md:grid-cols-1 gap-5">
+                <div class="grid lg:grid-cols-3 gap-5 sm:grid-cols-1 gap-5 md:grid-cols-1 gap-5 mb-5">
                     <div class="card bg-base-100 w-80 shadow-2xl ">
                         <div class="card-body items-center text-center">
                             <div class="bg-blue-500 p-3 text-white border rounded-full">
@@ -211,11 +215,11 @@
             </div>
             </div>
     </section>
-    <div class="custom-shape-divider-top-1738653913">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
-    </div>
+
+
+
+
+ 
 
 </body>
 <style>
@@ -235,5 +239,24 @@
 .custom-shape-divider-top-1738653913 .shape-fill {
     fill: #E8E8E8;
 }
+
+.custom-shape-divider-top-1738751094 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1738751094 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-top-1738751094 .shape-fill {
+    fill: #FFFFFF;
+}
+
 </style>
 </html>
