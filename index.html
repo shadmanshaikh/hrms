@@ -179,25 +179,29 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 items-center">
           <!-- Mockup Phone 1 -->
            <div>
-             <p class="text-center text-2xl font-bold">Work on Web</p>
+             <p class="text-center text-2xl font-bold">Works on Web</p>
              <div class="mockup-window border-base-300 border">
                <div class="border-base-300 flex justify-center border-t ">
-                 <img src="https://raw.githubusercontent.com/shadmanshaikh/rukn/refs/heads/main/public/photos/dashboard.png?token=GHSAT0AAAAAAC6HGDES6RJ4ASRMMTKCHMR4Z5ERI5A" alt="HRMS Demo" class="w-full h-full object-cover rounded-md">
+                 <img src="./src/dashboard.png" alt="HRMS Demo" class="w-full h-full object-cover rounded-md">
                </div>
              </div>
            </div>
           <!-- Empty Placeholder for spacing -->
           <div>
+            <p class="text-center text-2xl font-bold">Works on Phone</p>
+
             <div class="mockup-window border-base-300 border">
-              <div class="border-base-300 flex justify-center border-t px-4 py-16">Hello!</div>
+              <div class="border-base-300 flex justify-center border-t px-4 py-16">
+                <img src="./src/pwa.png" alt="HRMS Demo" class="w-full h-full object-cover rounded-md">
+              </div>
             </div>
           </div>
           <!-- Empty Placeholder for spacing -->
           <div>
-            <p class="text-center text-2xl font-bold mb-3">Work on Desktop</p>
+            <p class="text-center text-2xl font-bold mb-3">Works on Desktop</p>
             <div class="mockup-window border-base-300 border">
               <div class="border-base-300 flex justify-center border-t ">
-                <img src="https://raw.githubusercontent.com/shadmanshaikh/rukn/refs/heads/main/public/photos/pwa.png?token=GHSAT0AAAAAAC6HGDETQFKKJVX5FTVK5T2OZ5ERHZQ" alt="HRMS Demo" class="w-full h-full object-cover rounded-md">
+                <img src="./src/dept.png" alt="HRMS Demo" class="w-full h-full object-cover rounded-md">
               </div>
             </div>
           </div>
@@ -211,65 +215,69 @@
     </section>
     
     <section class="contact-us bg-[#4A00FF]">
-          <p class="text-4xl font-bold ml-10 text-white p-10">TRANSFORM YOUR BUSINESS WITH RUKN</p>
-          <div class="grid grid-cols-2 pb-5">
-              <div class="text-xl text-white col-span-1 sm:col-span-2 lg:col-span-1">
-                <p class="p-5 text-xl font-bold">
-                  Our all-in-one HR & employee benefits platform allows you to:
-                </p>
-                <ul class="p-2">
-                  <li class="mb-5">
-                     - Run payroll in minutes and pay your employees faster than they can say pay day.
-                  </li>
-                  <li>
-                     - Manage leave requests, allowance, history and any overlaps.
-                  </li>
-                </ul>
-              </div>
-              <div class="">
-                <div class="card bg-base-100 w-96 shadow-xl">
-                  <div class="card-body">
-                    <h2 class="card-title">Let's Talk</h2>
-                    <div>
-                      <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                          <span class="label-text">What is your name?</span>
-                        </div>
-                        <input type="text" placeholder="Enter your full name" class="input input-bordered w-full max-w-xs" />
-                      
-                      </label>
-
-                      <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                          <span class="label-text">Company email address</span>
-                        </div>
-                        <input type="text" placeholder="Enter your company email address" class="input input-bordered w-full max-w-xs" />
-                      </label>
-
-                      <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                          <span class="label-text">Company name</span>
-                        </div>
-                        <input type="text" placeholder="Enter your company name" class="input input-bordered w-full max-w-xs" />
-                      </label>
-
-                      <label class="form-control w-full max-w-xs">
-                        <div class="label">
-                          <span class="label-text">Contact number</span>
-                        </div>
-                        <input type="text" placeholder="Enter your contact number" class="input input-bordered w-full max-w-xs" />
-                      </label>
-                    </div>
-                   
-                    <div class="card-actions justify-end">
-                      <button class="btn btn-primary">Get Rukn</button>
-                    </div>
+      <p class="text-4xl font-bold ml-10 text-white p-10 text-center">
+        TRANSFORM YOUR BUSINESS WITH RUKN
+      </p>
+      <!-- For small devices: grid-cols-1 (one column); for md and up: grid-cols-2 (two columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pb-5">
+        
+        <!-- Left column -->
+        <div class="text-xl text-white">
+          <p class="p-5 text-xl font-bold">
+            Our all-in-one HR & employee benefits platform allows you to:
+          </p>
+          <ul class="pl-5">
+            <li class="mb-5">
+              - Run payroll in minutes and pay your employees faster than they can say pay day.
+            </li>
+            <li>
+              - Manage leave requests, allowance, history and any overlaps.
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Right column (Contact Card) -->
+        <div>
+          <!-- On small devices, make card full width; on md and up, fix card width -->
+          <div class="card bg-base-100 w-full md:w-96 shadow-xl mx-auto">
+            <div class="card-body">
+              <h2 class="card-title">Let's Talk</h2>
+              <div>
+                <label class="form-control w-full max-w-xs">
+                  <div class="label">
+                    <span class="label-text">What is your name?</span>
                   </div>
-                </div>
+                  <input type="text" placeholder="Enter your full name" class="input input-bordered w-full max-w-xs" />
+                </label>
+                <label class="form-control w-full max-w-xs">
+                  <div class="label">
+                    <span class="label-text">Company email address</span>
+                  </div>
+                  <input type="text" placeholder="Enter your company email address" class="input input-bordered w-full max-w-xs" />
+                </label>
+                <label class="form-control w-full max-w-xs">
+                  <div class="label">
+                    <span class="label-text">Company name</span>
+                  </div>
+                  <input type="text" placeholder="Enter your company name" class="input input-bordered w-full max-w-xs" />
+                </label>
+                <label class="form-control w-full max-w-xs">
+                  <div class="label">
+                    <span class="label-text">Contact number</span>
+                  </div>
+                  <input type="text" placeholder="Enter your contact number" class="input input-bordered w-full max-w-xs" />
+                </label>
               </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Get Rukn</button>
+              </div>
+            </div>
           </div>
+        </div>
+        
+      </div>
     </section>
-  
+    
 
 
     <footer class="bg-black p-5">
