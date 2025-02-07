@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.48.1/dist/umd/supabase.min.js"></script>
 
 </head>
 <body class=" overflow-x-hidden">
@@ -39,8 +40,8 @@
               <a class="btn btn-ghost text-xl text-white" href="https://www.naimatinnovation.com">RUKN HRMS</a>
             </div>
             <div class="navbar-center hidden lg:flex ">
-              <ul class="menu menu-horizontal px-1 text-xl">
-                <li class="text-white"><a href="#why">Why Rukn</a></li>
+              <ul class="menu menu-horizontal ">
+                <li class="text-white"><a href="#why" class="">Why Rukn</a></li>
                 <li class="text-white"><a href="#features">Features</a></li>
                 <li class="text-white"><a>Contact Us</a></li>
               </ul>
@@ -241,6 +242,7 @@
         <div>
           <!-- On small devices, make card full width; on md and up, fix card width -->
           <div class="card bg-base-100 w-full md:w-96 shadow-xl mx-auto">
+            <form id="customerForm">
             <div class="card-body">
               <h2 class="card-title">Let's Talk</h2>
               <div>
@@ -248,39 +250,41 @@
                   <div class="label">
                     <span class="label-text">What is your name?</span>
                   </div>
-                  <input type="text" placeholder="Enter your full name" class="input input-bordered w-full max-w-xs" />
+                  <input type="text" id="name" placeholder="Enter your full name" class="input input-bordered w-full max-w-xs" />
                 </label>
                 <label class="form-control w-full max-w-xs">
                   <div class="label">
                     <span class="label-text">Company email address</span>
                   </div>
-                  <input type="text" placeholder="Enter your company email address" class="input input-bordered w-full max-w-xs" />
+                  <input type="text" id="email" placeholder="Enter your company email address" class="input input-bordered w-full max-w-xs" />
                 </label>
                 <label class="form-control w-full max-w-xs">
                   <div class="label">
                     <span class="label-text">Company name</span>
                   </div>
-                  <input type="text" placeholder="Enter your company name" class="input input-bordered w-full max-w-xs" />
+                  <input type="text" id="company" placeholder="Enter your company name" class="input input-bordered w-full max-w-xs" />
                 </label>
                 <label class="form-control w-full max-w-xs">
                   <div class="label">
                     <span class="label-text">Contact number</span>
                   </div>
-                  <input type="text" placeholder="Enter your contact number" class="input input-bordered w-full max-w-xs" />
+                  <input type="text" id="contact" placeholder="Enter your contact number" class="input input-bordered w-full max-w-xs" />
                 </label>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Get Rukn</button>
+                <button class="btn btn-primary" type="submit">Get Rukn</button>
               </div>
             </div>
+          </form>
           </div>
         </div>
         
       </div>
+      <div class="border-1">
+        <p id="msg"></p>
+      </div>
     </section>
     
-
-
     <footer class="bg-black p-5">
       <div class="flex flex-col sm:flex-row sm:justify-between text-white">
         <div class="mb-4 sm:mb-0">
@@ -313,10 +317,46 @@
 <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 </body>
 <script>
-   $(document).ready(function() {
-      $('.tlt').textillate({ in: { effect: 'fadeInUp', delay: 50 } });
-    });
+  // ✅ Initialize Supabase correctly
+  
+  // ✅ Ensure DOM is fully loaded before running script
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("customerForm").addEventListener("submit", async function (e) {
+        const supabaseUrl = "https://mkffgvvgecvcyjeufnti.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rZmZndnZnZWN2Y3lqZXVmbnRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg4NDkyNTksImV4cCI6MjA1NDQyNTI1OX0.zTJWuj64NIO0qrRvhG6nvfUG6P6ifWfJT3nQDO_WKrE";
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+          e.preventDefault(); // Prevent page reload
 
+          // ✅ Get input values correctly using .value
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const company = document.getElementById("company").value.trim();
+          const contact = document.getElementById("contact").value.trim();
+          
+          // ✅ Ensure required fields are filled
+          if (!name || !email) {
+              document.getElementById("msg").innerHTML = "Name and Email are required!";
+              return;
+          }
+
+          // ✅ Insert into Supabase database
+          let { data, error } = await supabase.from("customer").insert([
+              { 
+                  customer_name: name, 
+                  customer_email: email, 
+                  customer_company: company, 
+                  customer_contact: contact 
+              }
+          ]);
+
+          if (error) {
+              document.getElementById("msg").innerHTML = "Error: " + error.message;
+          } else {
+              document.getElementById("msg").innerHTML = "Data submitted successfully!";
+              document.getElementById("customerForm").reset(); // Clear form after submission
+          }
+      });
+  });
 </script>
 <style>
 
@@ -374,6 +414,9 @@
 body {
   background-color: var(--my-color);
 }
+
+
+
 
 </style>
 </html>
