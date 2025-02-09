@@ -224,6 +224,63 @@
       <h1 class="text-center font-bold text-4xl">Why Rukn HRMS ?</h1>
 </section>
     
+
+<section id="faq" class="faq bg-base-200 p-3">
+  <h1 class="text-4xl text-center font-bold mt-3">Frequenty Asked Questions </h1>
+  <div class="card bg-base-100 shadow-xl mt-10 mb-10">
+    <div class="card-body">
+      <h2 class="card-title"></h2>
+        <div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is an HRMS, and how does it work?</div>
+            <div class="collapse-content">
+              <p class="text-xl">An HRMS is a software solution that helps organizations manage various HR functions like payroll, employee records, recruitment, attendance, performance management, and compliance. It centralizes employee data and automates HR tasks to improve efficiency.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">What are the key features of an HRMS?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                A comprehensive HRMS typically includes features like employee database management, payroll processing, time and attendance tracking, benefits administration, performance management, and reporting & analytics.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How does an HRMS improve HR efficiency?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                An HRMS automates repetitive HR tasks, reduces paperwork, minimizes errors in payroll and compliance, and provides self-service options for employees. This allows HR teams to focus on strategic tasks like employee engagement and talent development.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Is HRMS suitable for small businesses?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                Yes, many HRMS solutions are scalable and cater to businesses of all sizes. Small businesses can benefit from automation, compliance tracking, and streamlined HR processes without needing a large HR team.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Can an HRMS help with workforce planning and analytics?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                Yes, HRMS provides data-driven insights through reports and analytics on employee performance, turnover rates, attendance trends, and workforce productivity, helping organizations make informed HR decisions.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+    </div>
+  </div>
+  
+</section>
+
     <section class="contact-us bg-[#4A00FF]">
       <p class="text-4xl font-bold ml-10 text-white p-10 text-center">
         TRANSFORM YOUR BUSINESS WITH RUKN
@@ -294,7 +351,7 @@
     </section>
 
 
-    
+  
     <footer class="bg-black p-5">
       <div class="flex flex-col sm:flex-row sm:justify-between text-white">
         <div class="mb-4 sm:mb-0">
@@ -367,6 +424,42 @@
           }
       });
   });
+
+
+  // geolcation
+  if (navigator.geolocation) {
+    const options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    };
+    navigator.geolocation.getCurrentPosition(showPosition, showError, options);
+} else {
+    console.log("Geolocation is not supported by this browser.");
+}
+
+function showPosition(position) {
+    console.log("Latitude: " + position.coords.latitude + 
+                " Longitude: " + position.coords.longitude +
+                " Accuracy: " + position.coords.accuracy + " meters");
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            console.log("User denied the request for Geolocation.");
+            break;
+        case error.POSITION_UNAVAILABLE:
+            console.log("Location information is unavailable.");
+            break;
+        case error.TIMEOUT:
+            console.log("The request to get user location timed out.");
+            break;
+        case error.UNKNOWN_ERROR:
+            console.log("An unknown error occurred.");
+            break;
+    }
+}
 </script>
 <style>
 
