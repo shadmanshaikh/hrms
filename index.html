@@ -33,8 +33,10 @@
                   tabindex="0"
                   class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                   <li class="text-white"><a href="#why" class="">Why Rukn</a></li>
-                  <li><a>Features</a></li>
-                  <li><a>Contact Us</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#contact">Contact Us</a></li>
+                  <li ><a href="#about">About</a></li>
+                  <li><a href="#faq">FAQ</a></li>
                 </ul>
               </div>
               <a class="btn btn-ghost text-xl text-white" href="https://www.naimatinnovation.com">RUKN HRMS</a>
@@ -43,9 +45,9 @@
               <ul class="menu menu-horizontal font-bold">
                 <li class="text-white"><a href="#why" class="">Why Rukn</a></li>
                 <li class="text-white"><a href="#features">Features</a></li>
-                <li class="text-white"><a>Contact Us</a></li>
-                <li class="text-white"><a>About</a></li>
-                <li class="text-white"><a>FAQ</a></li>
+                <li class="text-white"><a href="#contact">Contact Us</a></li>
+                <li class="text-white"><a href="#about">About</a></li>
+                <li class="text-white"><a href="#faq">FAQ</a></li>
               </ul>
             </div>
             <div class="navbar-end">
@@ -225,7 +227,64 @@
       </div>
     </section>
     
-    <section class="contact-us bg-[#4A00FF]">
+
+<section id="faq" class="faq bg-base-200 p-3">
+  <h1 class="text-4xl text-center font-bold mt-3">Frequenty Asked Questions </h1>
+  <div class="card bg-base-100 shadow-xl mt-10 mb-10">
+    <div class="card-body">
+      <h2 class="card-title"></h2>
+        <div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is an HRMS, and how does it work?</div>
+            <div class="collapse-content">
+              <p class="text-xl">An HRMS is a software solution that helps organizations manage various HR functions like payroll, employee records, recruitment, attendance, performance management, and compliance. It centralizes employee data and automates HR tasks to improve efficiency.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">What are the key features of an HRMS?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                A comprehensive HRMS typically includes features like employee database management, payroll processing, time and attendance tracking, benefits administration, performance management, and reporting & analytics.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How does an HRMS improve HR efficiency?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                An HRMS automates repetitive HR tasks, reduces paperwork, minimizes errors in payroll and compliance, and provides self-service options for employees. This allows HR teams to focus on strategic tasks like employee engagement and talent development.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Is HRMS suitable for small businesses?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                Yes, many HRMS solutions are scalable and cater to businesses of all sizes. Small businesses can benefit from automation, compliance tracking, and streamlined HR processes without needing a large HR team.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus ">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Can an HRMS help with workforce planning and analytics?</div>
+            <div class="collapse-content">
+              <p class="text-xl">
+                Yes, HRMS provides data-driven insights through reports and analytics on employee performance, turnover rates, attendance trends, and workforce productivity, helping organizations make informed HR decisions.
+              </p>
+            </div>
+          </div>
+        
+        </div>
+    </div>
+  </div>
+  
+</section>
+
+    <section id="contact" class="contact-us bg-[#4A00FF]">
       <p class="text-4xl font-bold ml-10 text-white p-10 text-center">
         TRANSFORM YOUR BUSINESS WITH RUKN
       </p>
@@ -295,7 +354,7 @@
     </section>
 
 
-    
+  
     <footer class="bg-black p-5">
       <div class="flex flex-col sm:flex-row sm:justify-between text-white">
         <div class="mb-4 sm:mb-0">
@@ -327,35 +386,47 @@
 
 <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 </body>
-<script type="module">
- 
+<script>
+  // ✅ Initialize Supabase correctly
+  
+  // ✅ Ensure DOM is fully loaded before running script
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("customerForm").addEventListener("submit", async function (e) {
+        const supabaseUrl = "https://mkffgvvgecvcyjeufnti.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rZmZndnZnZWN2Y3lqZXVmbnRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg4NDkyNTksImV4cCI6MjA1NDQyNTI1OX0.zTJWuj64NIO0qrRvhG6nvfUG6P6ifWfJT3nQDO_WKrE";
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+          e.preventDefault(); // Prevent page reload
 
-  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-  const supabaseUrl = "https://mkffgvvgecvcyjeufnti.supabase.co";
-  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rZmZndnZnZWN2Y3lqZXVmbnRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg4NDkyNTksImV4cCI6MjA1NDQyNTI1OX0.zTJWuj64NIO0qrRvhG6nvfUG6P6ifWfJT3nQDO_WKrE";
-  const supabaseClient = createClient(supabaseUrl, supabaseKey);
+          // ✅ Get input values correctly using .value
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const company = document.getElementById("company").value.trim();
+          const contact = document.getElementById("contact").value.trim();
+          
+          // ✅ Ensure required fields are filled
+          if (!name || !email) {
+              document.getElementById("msg").innerHTML = "Name and Email are required!";
+              return;
+          }
 
-  document.getElementById("customerForm").addEventListener("submit" , async function(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const company = document.getElementById("company").value;
-    const contact = document.getElementById("contact").value;
-    
-    let {data , error} = await supabaseClient.insert();
-    console.log(name , email , company  , contact);
-  })
+          // ✅ Insert into Supabase database
+          let { data, error } = await supabase.from("customer").insert([
+              { 
+                  customer_name: name, 
+                  customer_email: email, 
+                  customer_company: company, 
+                  customer_contact: contact 
+              }
+          ]);
 
-  async function fetchCustomers() {
-    const { data, error } = await supabaseClient.from("customer").select("*");
-    if (error) {
-      console.error("Error fetching customers:", error);
-    } else {
-      console.log("Customer data:", data);
-    }
-  }
-
-      // fetchCustomers();     
+          if (error) {
+              document.getElementById("msg").innerHTML = "Error: " + error.message;
+          } else {
+              document.getElementById("msg").innerHTML = "Data submitted successfully!";
+              document.getElementById("customerForm").reset(); // Clear form after submission
+          }
+      });
+  });
 </script>
 <style>
 
