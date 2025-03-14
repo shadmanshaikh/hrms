@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.48.1/dist/umd/supabase.min.js"></script>
 
 </head>
 <body class=" overflow-x-hidden">
@@ -45,6 +44,7 @@
             <div class="navbar-center hidden lg:flex ">
               <ul class="menu menu-horizontal font-bold">
                 <li class="text-white"><a href="#why" class="">Why Rukn</a></li>
+                <li class="text-white"><a href="#ai" class="">AI Powered</a></li>
                 <li class="text-white"><a href="#features">Features</a></li>
                 <li class="text-white"><a href="#contact">Contact Us</a></li>
                 <li class="text-white"><a href="#about">About</a></li>
@@ -67,11 +67,18 @@
             src="./src/hero3.gif"
             class="max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg shadow-2xl mx-auto" />
           <div class="text-center lg:text-left">
-            <h1 class="text-4xl sm:text-5xl font-bold">Empower Your Workforce, Simplify HR</h1>
+            <div class="badge badge-primary badge-outline text-white p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path d="M10.6144 17.7956C10.277 18.5682 9.20776 18.5682 8.8704 17.7956L7.99275 15.7854C7.21171 13.9966 5.80589 12.5726 4.0523 11.7942L1.63658 10.7219C.868536 10.381.868537 9.26368 1.63658 8.92276L3.97685 7.88394C5.77553 7.08552 7.20657 5.60881 7.97427 3.75892L8.8633 1.61673C9.19319.821767 10.2916.821765 10.6215 1.61673L11.5105 3.75894C12.2782 5.60881 13.7092 7.08552 15.5079 7.88394L17.8482 8.92276C18.6162 9.26368 18.6162 10.381 17.8482 10.7219L15.4325 11.7942C13.6789 12.5726 12.2731 13.9966 11.492 15.7854L10.6144 17.7956ZM4.53956 9.82234C6.8254 10.837 8.68402 12.5048 9.74238 14.7996 10.8008 12.5048 12.6594 10.837 14.9452 9.82234 12.6321 8.79557 10.7676 7.04647 9.74239 4.71088 8.71719 7.04648 6.85267 8.79557 4.53956 9.82234ZM19.4014 22.6899 19.6482 22.1242C20.0882 21.1156 20.8807 20.3125 21.8695 19.8732L22.6299 19.5353C23.0412 19.3526 23.0412 18.7549 22.6299 18.5722L21.9121 18.2532C20.8978 17.8026 20.0911 16.9698 19.6586 15.9269L19.4052 15.3156C19.2285 14.8896 18.6395 14.8896 18.4628 15.3156L18.2094 15.9269C17.777 16.9698 16.9703 17.8026 15.956 18.2532L15.2381 18.5722C14.8269 18.7549 14.8269 19.3526 15.2381 19.5353L15.9985 19.8732C16.9874 20.3125 17.7798 21.1156 18.2198 22.1242L18.4667 22.6899C18.6473 23.104 19.2207 23.104 19.4014 22.6899ZM18.3745 19.0469 18.937 18.4883 19.4878 19.0469 18.937 19.5898 18.3745 19.0469Z"></path>
+              </svg>
+              
+               Middle East First AI Powered HRMS</div>
+
+            <h1 class="text-4xl sm:text-5xl font-bold"><span class="text-[#4A00FF]">Empower Your Workforce,</span> Simplify HR</h1>
             <p class="py-6 text-lg sm:text-xl">
               Seamlessly Automate Payroll, Attendance, and Performance Management While Ensuring Compliance and Efficiency Across Your Workforce.
             </p>
-            <button class="btn btn-primary text-white">
+            <button class="btn bg-[#4A00FF] text-white hover:bg-black">
               <a href="https://demo.naimatinnovation.com">Request a Demo</a>
             </button>
           </div>
@@ -154,7 +161,7 @@
                   <img src="./src/feature3.svg" alt="Recruitment Management" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Recruitment Management</h2>
+                  <h2 class="card-title">Employee Onboarding</h2>
                   <p>Optimize hiring with structured workflows and tracking systems.</p>
                 </div>
               </div>
@@ -164,7 +171,7 @@
     
         <!-- Centered Button -->
         <div class="flex justify-center mt-10">
-          <button class="btn btn-primary text-white">Checkout All Features</button>
+          <button class="btn bg-[#4A00FF] text-white hover:bg-black"><a href="features.html">Checkout All Features</a></button>
         </div>
       </section>
     </div>
@@ -217,14 +224,41 @@
       </div>
 
       <div class="flex justify-center items-center mt-10 gap-5">
-          <button class="btn btn-primary"><a href="https://www.youtube.com/@ruknio">WATCH TOUR VIDEO</a></button>
+          <button class="btn btn-primary"><a href="https://www.youtube.com/">WATCH TOUR VIDEO</a></button>
           <button class="btn btn-neutral"><a href="https://demo.naimatinnovation.com">REQUEST A DEMO</a></button>
       </div>
     </section>
 
-    <section id="why" class="mt-10 text-[#4A00FF] mb-10">
-      <h1 class="text-center font-bold text-4xl">Why Rukn HRMS ?</h1>
-</section>
+    <section id="why" class="mt-10 mb-10 text-[#4A00FF]">
+      <div class="container mx-auto">
+        <h1 class="text-center font-bold text-4xl">Why Rukn HRMS?</h1>
+        <div class="text-center mt-10">
+          <ul>
+            <li>
+              ✔ All-in-One HR Solution – Manage payroll, attendance, leave, and more in a single platform.
+            </li>
+            <li>
+              ✔ Cloud-Based & Secure – Access HR data anytime, anywhere with top-notch security.
+            </li>
+            <li>
+              ✔ Easy Employee Management – Simplify hiring, onboarding, and performance tracking.
+            </li>
+            <li>
+              ✔ Payroll & Compliance Made Simple – Automate salary processing and stay compliant.
+            </li>
+            <li>
+              ✔ Customizable & Scalable – Tailored to fit small businesses to large enterprises.
+            </li>
+            <li>
+              ✔ Powerful Reports & Analytics – Gain deep HR insights with real-time dashboards.
+            </li>
+            <li>
+              ✔ User-Friendly Interface – No tech expertise needed—intuitive and easy to use.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     
 
 <section id="faq" class="faq bg-base-200 p-3">
@@ -339,7 +373,7 @@
                 </label>
               </div>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary" type="submit">Get Rukn</button>
+                <button class="btn bg-[#4A00FF] text-white" type="submit">Get Rukn</button>
               </div>
             </div>
           </form>
@@ -426,42 +460,6 @@
           }
       });
   });
-
-
-  // geolcation
-  if (navigator.geolocation) {
-    const options = {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0
-    };
-    navigator.geolocation.getCurrentPosition(showPosition, showError, options);
-} else {
-    console.log("Geolocation is not supported by this browser.");
-}
-
-function showPosition(position) {
-    console.log("Latitude: " + position.coords.latitude + 
-                " Longitude: " + position.coords.longitude +
-                " Accuracy: " + position.coords.accuracy + " meters");
-}
-
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            console.log("User denied the request for Geolocation.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-            console.log("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            console.log("The request to get user location timed out.");
-            break;
-        case error.UNKNOWN_ERROR:
-            console.log("An unknown error occurred.");
-            break;
-    }
-}
 </script>
 <style>
 
